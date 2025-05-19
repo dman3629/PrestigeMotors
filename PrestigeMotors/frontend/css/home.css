@@ -1,0 +1,341 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  background-image: url('https://images.pexels.com/photos/404190/pexels-photo-404190.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 20, 30, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 var(--spacing-lg);
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-secondary);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero CTA Button Styles */
+.hero-cta .btn-outline {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.hero-cta .btn-outline:hover {
+  background-color: var(--color-primary-light);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Featured Vehicles */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.vehicle-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.vehicle-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.vehicle-content {
+  padding: var(--spacing-md);
+}
+
+.vehicle-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-price {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.vehicle-subtitle {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-sm);
+}
+
+.vehicle-features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-gray-700);
+  font-size: 0.9rem;
+}
+
+.vehicle-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-view {
+  flex: 1;
+  padding: 0.6rem;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-normal);
+}
+
+.btn-view:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+.btn-compare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius-sm);
+  margin-left: var(--spacing-sm);
+  transition: background-color var(--transition-normal);
+}
+
+.btn-compare:hover {
+  background-color: var(--color-gray-200);
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.service-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.service-title {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.service-description {
+  color: var(--color-gray-600);
+  margin-bottom: 0;
+}
+
+/* Testimonials */
+.testimonial-slider {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  margin: 0 var(--spacing-sm);
+}
+
+.testimonial-content {
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding: 0 var(--spacing-md);
+}
+
+.testimonial-content::before,
+.testimonial-content::after {
+  content: '"';
+  font-size: 3rem;
+  color: var(--color-accent);
+  line-height: 0;
+  position: absolute;
+}
+
+.testimonial-content::before {
+  top: 15px;
+  left: 0;
+}
+
+.testimonial-content::after {
+  bottom: -5px;
+  right: 0;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.testimonial-title {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+
+/* Newsletter */
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-title {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.newsletter-subtitle {
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.75rem var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline {
+    width: 100%;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero {
+    min-height: 600px;
+  }
+  
+  .service-card {
+    padding: var(--spacing-md);
+  }
+}

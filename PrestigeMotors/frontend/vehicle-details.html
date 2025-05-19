@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Details | Prestige Motors</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/vehicle-details.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header" class="header header-dark">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Prestige<span>Motors</span></h1>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="inventory.html" class="nav-link">Inventory</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-secondary menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vehicle Details -->
+  <section class="vehicle-details section">
+    <div class="container">
+      <div id="vehicle-info" class="vehicle-info">
+        <!-- Vehicle details will be loaded here -->
+        <div class="loader"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Similar Vehicles -->
+  <section class="similar-vehicles section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Similar Vehicles</h2>
+        <p class="section-subtitle">You might also be interested in these vehicles</p>
+      </div>
+      <div class="similar-grid" id="similar-vehicles">
+        <!-- Similar vehicles will be loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="inquiry-section section">
+    <div class="container">
+      <div class="inquiry-grid">
+        <div class="inquiry-content">
+          <h2>Interested in this vehicle?</h2>
+          <p>Our luxury vehicle specialists are ready to assist you with any questions you may have about this vehicle or to schedule a personalized test drive.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <h4>Call Us</h4>
+              <p>+1 (800) 555-LUXE</p>
+            </div>
+            <div class="contact-item">
+              <h4>Visit Us</h4>
+              <p>123 Luxury Lane, Beverly Hills, CA 90210</p>
+            </div>
+            <div class="contact-item">
+              <h4>Hours</h4>
+              <p>Monday - Friday: 9am - 7pm</p>
+              <p>Saturday: 10am - 6pm</p>
+              <p>Sunday: By appointment only</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="inquiry-form-container">
+          <h3>Send an Inquiry</h3>
+          <form id="inquiry-form" class="inquiry-form">
+            <input type="hidden" id="vehicle-id" name="vehicleId">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="inquiry-type">Inquiry Type</label>
+              <select id="inquiry-type" name="inquiryType">
+                <option value="test-drive">Schedule Test Drive</option>
+                <option value="pricing">Pricing Information</option>
+                <option value="financing">Financing Options</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Prestige<span>Motors</span></h2>
+          <p>Redefining the luxury automotive experience</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="inventory.html">Inventory</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#financing">Financing</a></li>
+              <li><a href="services.html#trade-in">Trade-In</a></li>
+              <li><a href="services.html#maintenance">Maintenance</a></li>
+              <li><a href="services.html#delivery">Delivery</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>123 Luxury Lane</li>
+              <li>Beverly Hills, CA 90210</li>
+              <li>+1 (800) 555-LUXE</li>
+              <li>info@prestigemotors.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PrestigeMotors. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils/api.js"></script>
+  <script src="js/utils/ui.js"></script>
+  <script src="js/data/cars.js"></script>
+  <script src="js/vehicle-details.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

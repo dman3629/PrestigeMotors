@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory | Prestige Motors</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/inventory.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header" class="header header-dark">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <h1>Prestige<span>Motors</span></h1>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="inventory.html" class="nav-link active">Inventory</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-secondary menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Inventory Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">Our Inventory</h1>
+      <p class="page-subtitle">Browse our exclusive collection of premium vehicles</p>
+    </div>
+  </section>
+
+  <!-- Inventory Section -->
+  <section class="inventory-section section">
+    <div class="container">
+      <div class="inventory-grid-container">
+        <!-- Filters -->
+        <div class="inventory-filters">
+          <h3>Refine Results</h3>
+          
+          <div class="filter-group">
+            <h4>Brand</h4>
+            <div class="filter-options" id="brand-filters">
+              <!-- Brand checkboxes will be generated here -->
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Body Type</h4>
+            <div class="filter-options" id="bodyType-filters">
+              <!-- Body type checkboxes will be generated here -->
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Year</h4>
+            <div class="filter-range">
+              <input type="number" id="year-min" placeholder="Min" class="range-input">
+              <span>to</span>
+              <input type="number" id="year-max" placeholder="Max" class="range-input">
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="filter-range">
+              <input type="number" id="price-min" placeholder="Min" class="range-input">
+              <span>to</span>
+              <input type="number" id="price-max" placeholder="Max" class="range-input">
+            </div>
+          </div>
+          
+          <button id="apply-filters" class="btn-primary">Apply Filters</button>
+          <button id="reset-filters" class="btn-outline">Reset</button>
+        </div>
+        
+        <!-- Inventory Grid -->
+        <div class="inventory-content">
+          <div class="inventory-actions">
+            <div class="inventory-count">
+              <span id="vehicle-count">0</span> vehicles found
+            </div>
+            <div class="inventory-sort">
+              <label for="sort-options">Sort by:</label>
+              <select id="sort-options" class="sort-select">
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="year-desc">Year: Newest First</option>
+                <option value="year-asc">Year: Oldest First</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="inventory-grid" id="inventory-grid">
+            <!-- Vehicle cards will be loaded here -->
+            <div class="loader"></div>
+          </div>
+          
+          <div class="pagination" id="pagination">
+            <!-- Pagination will be generated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Prestige<span>Motors</span></h2>
+          <p>Redefining the luxury automotive experience</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="inventory.html">Inventory</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#financing">Financing</a></li>
+              <li><a href="services.html#trade-in">Trade-In</a></li>
+              <li><a href="services.html#maintenance">Maintenance</a></li>
+              <li><a href="services.html#delivery">Delivery</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>123 Luxury Lane</li>
+              <li>Beverly Hills, CA 90210</li>
+              <li>+1 (800) 555-LUXE</li>
+              <li>info@prestigemotors.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PrestigeMotors. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Twitter</a>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils/api.js"></script>
+  <script src="js/utils/ui.js"></script>
+  <script src="js/data/cars.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
